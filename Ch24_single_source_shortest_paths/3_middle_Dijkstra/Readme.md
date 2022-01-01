@@ -28,7 +28,7 @@
 ## Complexity:
 1. Space: O(V)
 2. Time: 
-    1. Use Binary heap: O(V+ElogV)
+    1. Use Binary heap: O[(|V|+|E|)logV]
     2. Use Fibonacci heap: O(E+VlogV)
 
 ## Pseudo Code:
