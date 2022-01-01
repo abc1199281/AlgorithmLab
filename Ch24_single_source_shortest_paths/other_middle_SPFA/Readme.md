@@ -2,6 +2,10 @@
 # [Middle] Shortest Path Faster Algorithm
 **Chapter: 24**
 
+## When to use?
+1. Single source shortest path general solution (support negative weight).
+2. Averagely faster than Bellman-Ford Algorithm
+
 ## Problem Formulation:
 1. input: 
 	1. G=(V, E), w:E->R, 
@@ -11,46 +15,42 @@
 	2. a single source shortest path tree
 	3. whether it has negative weighted cycle reachable from source
 	
+## Limitations:
+1. If it's acyclic-->DAG
+2. If it's non-negative weighted-->Dijkastra
+
 ## Main idea:
 1.	Bassicly follow the Bellman-Ford algorithm.
 2.	Use FIFO queue to store the vertex to be search
 3.	Vertex shoud be inserted into queue whenever its distance is updated.
+
+## Complexity:
+1. Space: O(V)
+2. Time: O(VE), average O(|E|)
 
 ## Pseudo Code:
 ```
 SPFA(G,w,s)
 	Initialize Graph(G,s):
 	que.push(k)
-	while(!que.empty())
+	while(!que.empty()){
 		u = q.front()
 		q.pop()
 		inQ[u]=false
-		for(v,w:u.adj)
-			if(d[v]>d[u]+w)
+		for(v,w:u.adj){
+			if(d[v]>d[u]+w){
 				d[v]=d[u]+w
-				if(!inQue[v])
+				if(!inQue[v]){
 					q.push(v)
 					inQue[v]=True
-				end
-			end
-		end
-	end
+				}
+			}
+		}
+	}
 ```
 
-
-## Complexity:
-1. Space: O(V)
-2. Time: O(VE), everage O(|E|)
-
-## Limitations:
-None
-
 ## Leetcode classic problems:
-
 1. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
-
-## Others modification:
-None
 
 ## C++ code sample:
 [Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
@@ -97,7 +97,6 @@ public:
                 }
             }
         }
-        
         int max_ele = 0;
         for(auto ele: d)
         {
@@ -107,3 +106,6 @@ public:
     }
 };
 ```
+
+## Others:
+None

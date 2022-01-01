@@ -18,9 +18,10 @@
 
 ## Main idea:
 1. Using gready approach. Each step selects the "min current distance" from currently reachable vertices.
-    - Like BFS, but it requires the ability to selectes the "min current distance".
+    - Like BFS, but it requires the ability to selects the "min current distance".
 2. Use heap to achieve the min weight selection. 
     - Please be familiar with the pair and comparator using priority_heap.
+    - Please note the usage of visited vector.
 
 ## Complexity:
 1. Space: O(V)
