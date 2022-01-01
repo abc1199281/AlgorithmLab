@@ -16,8 +16,15 @@ There are difficulty for you to explore, which basically follow the classificati
 
 
 ### Middle
-- [Ch24.1 Graph, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_bellman_ford)  
-- [Ch24.* Graph, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
+#### Graph
+- [Ch22.2 Elementary Graph Algo., BFS (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch22.3 Elementary Graph Algo., DFS (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch22.3 Elementary Graph Algo., Topological Sort (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch23.2.1 Min spanning tree, Kruskal (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch23.2.1 Min spanning tree, Prim (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch24.1 Single source shortest path, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [Ch24.1 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Dikstra)  
+- [Ch24.* Single source shortest path, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
 
 
 ### Hard  
