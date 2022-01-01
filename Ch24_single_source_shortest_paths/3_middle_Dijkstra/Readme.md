@@ -27,9 +27,18 @@
 
 ## Complexity:
 1. Space: O(V)
-2. Time: 
-    1. Use Binary heap: O[(|V|+|E|)logV]
-    2. Use Fibonacci heap: O(E+VlogV)
+2. Time:
+    1. Heap: (Amortized analysis)
+        1. for each vertex: insert once, extract min once.
+        2. for each edge: decrease key once
+    2. Use Binary heap: O[(|V|+|E|)logV]
+        1. extract-min: O(logV)*|V|
+        2. insert: O(1)*|V|
+        3. decrease key: O(logV)*|E|        
+    3. Use Fibonacci heap: O(E+VlogV)
+        1. extract-min: O(logV)*|V|
+        2. insert: O(1)*|V|
+        3. decrease key: O(1)*|E|
 
 ## Pseudo Code:
 ```
@@ -44,7 +53,8 @@ Dijkstra_Algorithm(G,w,s)
     }   
 ```
 
-``` v2
+implemented version
+``` 
 Dijkstra_Algorithm(G,w,s)
 	Initialize Graph(G,s):
 	initialize heap, visited
