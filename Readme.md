@@ -23,7 +23,8 @@ There are difficulty for you to explore, which basically follow the classificati
 - [Ch23.2.1 Min. spanning tree, Kruskal (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
 - [Ch23.2.1 Min. spanning tree, Prim (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
 - [Ch24.1 Single source shortest path, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch24.1 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Dikstra)  
+- [Ch24.2 Single source shortest path, Directed Acyclic graph (22/01/01)](/Ch24_single_source_shortest_paths/2_middle_DirectedAcyclicGraph)  
+- [Ch24.3 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/3_middle_Dijkstra)  
 - [Ch24.* Single source shortest path, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
 
 
