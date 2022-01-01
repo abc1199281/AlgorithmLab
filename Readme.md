@@ -3,9 +3,9 @@
 ## Motivation: **bridge the algorithm theorem and leet code problems** 
 In this repository, algorithm notes are provided to **bridge the algorithm theorem and leet code problems** [1,2].
 
-If we only practice the leet code problems, we might be lost and frustrated to the lack of systemetic view of algorithm.
+If we only practice the leet code problems, we might be lost and frustrated due to the lack of systemetic view of algorithm.
 
-If we only read the algorithm bible [1], we might still not be able to solve leetcode problems within a reasonable time. Because the book only provides pseudo codes which are easier to understand and more general beyond different language. But when solving problems, there are many implementation details and variants aspects to the same algorithm. 
+If we only read the algorithm bible [1], we might still not be able to solve leetcode problems within a reasonable time. Because the book only provides pseudo codes which are much easier to understand/memorize and more general beyond different language. But when solving problems, there are many implementation details and variants aspects to the same algorithm. Taking Dijkstra's algorithm for example, the bible provides a pseudo code using set data structure whereas realistically we should use heap instead.
 
 To link the algorithm theorem and leet code problems, the note contains several questions such as pseudo code from book, c++ code implementation, main idea,  limitations, complexity, etc.
 

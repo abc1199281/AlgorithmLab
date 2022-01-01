@@ -18,8 +18,10 @@
 
 ## Main idea:
 1. Using gready approach. Each step selects the "min current distance" from currently reachable vertices.
-    - Like BFS, but it requires the ability to selects the "min current distance".
-2. Use heap to achieve the min weight selection. 
+    - In pseudo code, it seems to be implemented in set data structure
+    - However, it is impelmented similar to BFS (queue), but requires the ability to selects the "min current distance".    
+    
+2. Use heap to achieve the min weight selection, use visited vector to distinguish set.
     - Please be familiar with the pair and comparator using priority_heap.
     - Please note the usage of visited vector.
 
@@ -31,6 +33,18 @@
 
 ## Pseudo Code:
 ```
+Dijkstra_Algorithm(G,w,s)
+    S = empty set
+    Q = G.V
+    while(!Q.empty){
+        u = extract-min(Q)
+        S = union{S,u}
+        for each vertex v in G.Adj[u]:
+            RELAX(u,v,w)
+    }   
+```
+
+``` v2
 Dijkstra_Algorithm(G,w,s)
 	Initialize Graph(G,s):
 	initialize heap, visited
