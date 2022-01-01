@@ -1,6 +1,9 @@
 # [Middle] Dijkastra
 **Chapter: 24.3**
 
+## When to use?
+1. Single source shortest path with no negative weight.
+
 ## Problem Formulation:
 1. input: 
 	1. G=(V, E), w:E->R, 
@@ -10,13 +13,17 @@
 	2. a single source shortest path tree
 	
 ## Limitations:
-1.	All the weights are not negative.
+1. All the weights are not negative.
+2. If this graph is directed acyclic, consider using DAG algorithm O(E+V).
 
 ## Main idea:
 1. Using gready approach. Each step selects the "min current distance" from currently reachable vertices.
-    - Like BFS, but it requires the ability to selectes the "min current distance".
-2. Use heap to achieve the min weight selection. 
+    - In pseudo code, it seems to be implemented in set data structure
+    - However, it is impelmented similar to BFS (queue), but requires the ability to selects the "min current distance".    
+    
+2. Use heap to achieve the min weight selection, use visited vector to distinguish set.
     - Please be familiar with the pair and comparator using priority_heap.
+    - Please note the usage of visited vector.
 
 ## Complexity:
 1. Space: O(V)
@@ -24,9 +31,20 @@
     1. Use Binary heap: O(V+ElogV)
     2. Use Fibonacci heap: O(E+VlogV)
 
-
 ## Pseudo Code:
 ```
+Dijkstra_Algorithm(G,w,s)
+    S = empty set
+    Q = G.V
+    while(!Q.empty){
+        u = extract-min(Q)
+        S = union{S,u}
+        for each vertex v in G.Adj[u]:
+            RELAX(u,v,w)
+    }   
+```
+
+``` v2
 Dijkstra_Algorithm(G,w,s)
 	Initialize Graph(G,s):
 	initialize heap, visited
@@ -43,10 +61,7 @@ Dijkstra_Algorithm(G,w,s)
         visited[u]=true
 ```
 
-
-
 ## Leetcode classic problems:
-
 1. [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
 
 ## C++ code sample:

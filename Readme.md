@@ -1,14 +1,15 @@
 ﻿# Algorithm Lab
 
-## Motivation: algorithm notes for an interview
+## Motivation: **bridge the algorithm theorem and leet code problems** 
 In this repository, algorithm notes are provided to **bridge the algorithm theorem and leet code problems** [1,2].
 
-If we only practice the leet code problems, we might be lost and frustrated to the lack of systemetic iamge of algorithm.
-If we only read the algorithm bible [1], we might still not be able to solve leetcode problems within a reasonable time, because there are many variants aspects to the same algorithm. 
+If we only practice the leet code problems, we might be lost and frustrated due to the lack of systemetic view of algorithm.
 
-To link the algorithm theorem and leet code problems, the layouts of forders follows the outline of [1]. Besides, the experiments which are not covered in the book are located in the folder **other** or the folder with same topic, but labeled with star sign.
+If we only read the algorithm bible [1], we might still not be able to solve leetcode problems within a reasonable time. Because the book only provides pseudo codes which are much easier to understand/memorize and more general beyond different language. But when solving problems, there are many implementation details and variants aspects to the same algorithm. Taking Dijkstra's algorithm for example, the bible provides a pseudo code using set data structure whereas realistically we should use heap instead.
 
-There are difficulty for you to explore, which basically follow the classificatino of leetcode [2].
+To link the algorithm theorem and leet code problems, the note contains several questions such as pseudo code from book, c++ code implementation, main idea,  limitations, complexity, etc.
+
+The layouts of forders basically follows the outline of [1]. Besides, the experiments which are not covered in the book are located in the folder **other** or the folder with similiar chapter, but labeled with star sign. The label of the difficulty basically follows the classification of leetcode [2].
 
 ## Outline  
 
@@ -30,14 +31,11 @@ There are difficulty for you to explore, which basically follow the classificati
 
 ### Hard  
 
-
 ## Recommendation Welcome
 This is my side project to verify some algorithm concept. Recommendation to this repo is very wellcome!  
 If you have any idea about this repo, just send your precious recommendation to me (poweihuang.ece06g@nctu.edu.tw). Thanks a lot.
 
 ## Recommended Book List and Reference
-
-
 1. [Cormen, Thomas H., et al. Introduction to algorithms. MIT press, 2009.](https://edutechlearners.com/download/Introduction_to_algorithms-3rd%20Edition.pdf)  
 As others have said, the book [1] is called the bible of Algorithm. Unless stated otherwise, the chapter number in this repository follows this book.
 2. [Leet Code](https://leetcode.com/)  
