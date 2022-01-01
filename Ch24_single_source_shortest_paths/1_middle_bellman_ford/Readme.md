@@ -1,6 +1,9 @@
 # [Middle] Bellman-Ford Algorithm
 **Chapter: 24.1**
 
+## When to use?
+1. Single source shortest path with # of iterations constrain
+
 ## Problem Formulation:
 1. input: 
 	1. G=(V, E), w:E->R, 
@@ -9,7 +12,11 @@
 	1. vector of shortest distance
 	2. a single source shortest path tree
 	3. whether it has negative weighted cycle reachable from source
-	
+
+## Limitations:
+1.	If all the weight are positive, please use Dijkstra's algorithm.
+3.	It can be optimized by shortest path faster algorithm (SPFA) where worst case is the same as O(VE) but in aversage is O(|E|).
+
 ## Main idea:
 1.	Shortest path cannot contain cycle-->shortest path is simple path
 2. |V| vertices-->|V|-1 relaxations can achieve shortest path (somehow DP)
@@ -17,6 +24,10 @@
 	-> there is negative weighted cycle reachable from source in graph
 	-> return false
 
+## Complexity:
+1. Space: O(V)
+2. Time: O(VE)
+	
 ## Pseudo Code:
 ```
 Bellman_Ford_Algorithm(G,w,s)
@@ -30,25 +41,16 @@ Bellman_Ford_Algorithm(G,w,s)
 	return True
 ```
 
-
-## Complexity:
-1. Space: O(V)
-2. Time: O(VE)
-
-## Limitations:
-1.	If all the weight are positive, please use Dijkstra's algorithm.
-3.	It can be optimized by shortest path faster algorithm (SPFA) where worst case is the same as O(VE) but in aversage is O(|E|).
-
 ## Leetcode classic problems:
 
-1. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
+1. [787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
 
 ## Others modification:
 None
 
 ## C++ code sample:
 
-[Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
+[787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
 
 ```c++
 typedef pair<int,int> pii; // useful data structure for weighted graph.
@@ -93,9 +95,10 @@ public:
     }
 };
 ```
-[Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
+
+[743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
 ```c++
-// Bellman Ford: TLE
+// Bellman Ford: TLE, need to use Dijkstra or SPFA
 class Solution {    
 public:
     int networkDelayTime(vector<vector<int>>& times, int n, int k)

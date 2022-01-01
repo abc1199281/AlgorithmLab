@@ -1,6 +1,9 @@
 # [Middle] Dijkastra
 **Chapter: 24.3**
 
+## When to use?
+1. Single source shortest path with no negative weight.
+
 ## Problem Formulation:
 1. input: 
 	1. G=(V, E), w:E->R, 
@@ -10,7 +13,8 @@
 	2. a single source shortest path tree
 	
 ## Limitations:
-1.	All the weights are not negative.
+1. All the weights are not negative.
+2. If this graph is directed acyclic, consider using DAG algorithm O(E+V).
 
 ## Main idea:
 1. Using gready approach. Each step selects the "min current distance" from currently reachable vertices.
@@ -23,7 +27,6 @@
 2. Time: 
     1. Use Binary heap: O(V+ElogV)
     2. Use Fibonacci heap: O(E+VlogV)
-
 
 ## Pseudo Code:
 ```
@@ -43,10 +46,7 @@ Dijkstra_Algorithm(G,w,s)
         visited[u]=true
 ```
 
-
-
 ## Leetcode classic problems:
-
 1. [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
 
 ## C++ code sample:
