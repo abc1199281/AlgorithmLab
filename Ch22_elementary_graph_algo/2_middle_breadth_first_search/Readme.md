@@ -1,15 +1,21 @@
-# [Middle] Bellman-Ford Algorithm
-**Chapter: 24.1**
+# [Middle] Breadth First Search
+**Chapter: 22.2**
+
+## When to use?
+1. Traversing all vertex in a graph
+2. Finding the shortest path between two vertices where **all edges have equal and positive weights**.
 
 ## Problem Formulation:
 1. input: 
-	1. G=(V, E), w:E->R, 
+	1. G=(V, E) 
 	2. source vertix
 2. output: 
 	1. vector of shortest distance
 	2. a single source shortest path tree
-	3. whether it has negative weighted cycle reachable from source
 	
+## Limitations:
+1.  **all edges have equal and positive weights**.
+
 ## Main idea:
 1.	Shortest path cannot contain cycle-->shortest path is simple path
 2. |V| vertices-->|V|-1 relaxations can achieve shortest path (somehow DP)
@@ -17,34 +23,40 @@
 	-> there is negative weighted cycle reachable from source in graph
 	-> return false
 
-## Pseudo Code:
-```
-Bellman_Ford_Algorithm(G,w,s)
-	Initialize Graph(G,s):
-	for i = 1 to |G.V|-1:
-		for each edge (u,v) in G.E:
-			relax(u,v,w)
-	for each edge(u,v) in G.E:
-		if v.d>u.d+w(u,v):
-			return False;
-	return True
-```
-
-
 ## Complexity:
 1. Space: O(V)
-2. Time: O(VE)
+2. Time: O(V+E), we need toe check each vertex & edge.
 
-## Limitations:
-1.	If all the weight are positive, please use Dijkstra's algorithm.
-3.	It can be optimized by shortest path faster algorithm (SPFA) where worst case is the same as O(VE) but in aversage is O(|E|).
+## Pseudo Code:
+```
+Breadth_First_Search(G,s)
+	
+    for each vertex u in G.V-{s}{
+        u.color=white
+        u.d = inf
+        u.pi = null
+    }
+    s.color = gray
+    s.d = 0
+    s.pi = null
+    
+    que = empty_set
+    que.push(s)
+    while(!que.empty()){
+        u = que.front();
+        u.color = gray;
+        for each v in G.adj[u]{
+            if v.color == white{
+                v.color = gray
+                v.d = u.d+1
+                v.pi = u
+            }
+        }
+    }    
+```
 
 ## Leetcode classic problems:
-
-1. [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)  
-
-## Others modification:
-None
+1. comming soon
 
 ## C++ code sample:
 
@@ -93,37 +105,6 @@ public:
     }
 };
 ```
-[Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
-```c++
-// Bellman Ford: TLE
-class Solution {    
-public:
-    int networkDelayTime(vector<vector<int>>& times, int n, int k)
-    {
-        vector<int> d(n+1,INT_MAX);
-        d[0]=0; //dummy node.
-        d[k]=0;
-        
-        for(int i = 1;i<=n-1;i++)
-        {
-            for(auto ele: times)
-            {
-                // relax
-                int u = ele[0];
-                int v = ele[1];
-                int w = ele[2];
-                
-                if (d[u]!=INT_MAX && d[v]>d[u]+w)
-                    d[v]=d[u]+w;
-            }
-        }
-        
-        int max_ele = 0;
-        for(auto ele: d)
-        {
-            max_ele=max(max_ele,ele);
-        }
-        return max_ele==INT_MAX? -1: max_ele;  
-    }
-};
-```
+
+## Others:
+N.A.

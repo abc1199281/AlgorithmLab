@@ -1,109 +1,88 @@
-
-# [Middle] Shortest Path Faster Algorithm
-**Chapter: 24**
+# [Middle] Topological sort (DFS)
+**Chapter: 22.4**
 
 ## Problem Formulation:
 1. input: 
-	1. G=(V, E), w:E->R, 
-	2. source vertix
+	1. G=(V, E), directed acyclic graph (DAG)
+	
 2. output: 
-	1. vector of shortest distance
-	2. a single source shortest path tree
-	3. whether it has negative weighted cycle reachable from source
+	1. vertices with topological order
+    2. bool: whether it is cyclic graph.
+	
+## Limitations:
+1. **for a cyclic graph, there is no topological sorting at all**.
+2. Ther is one alternative: Kahn's algorithm.
 	
 ## Main idea:
-1.	Bassicly follow the Bellman-Ford algorithm.
-2.	Use FIFO queue to store the vertex to be search
-3.	Vertex shoud be inserted into queue whenever its distance is updated.
+1. DFS and then reverse the visited list.
+2. If a vertex is marked as todo but visited again-->cycle.
 
 ## Pseudo Code:
 ```
-SPFA(G,w,s)
-	Initialize Graph(G,s):
-	que.push(k)
-	while(!que.empty())
-		u = q.front()
-		q.pop()
-		inQ[u]=false
-		for(v,w:u.adj)
-			if(d[v]>d[u]+w)
-				d[v]=d[u]+w
-				if(!inQue[v])
-					q.push(v)
-					inQue[v]=True
-				end
-			end
-		end
-	end
+Topological_Sort(G)
+    call DFS to compute finishing time v.f for each vertex v.
+    as each vertex is finished, insert it onto the front of a linked list.
+    return the linked list.
 ```
-
 
 ## Complexity:
 1. Space: O(V)
-2. Time: O(VE), everage O(|E|)
+2. Time: O(V+E)
 
 ## Limitations:
-None
+1. Recurvise version suffers from the limited system stack-->Kahn's algorithm may be an alternative.
 
 ## Leetcode classic problems:
-
-1. [Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
+1. [210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)  
 
 ## Others modification:
-None
+1. Please be aware the iterative version is much tricker to implement due to the need of labeling the status.
 
 ## C++ code sample:
-[Network Delay Time](https://leetcode.com/problems/network-delay-time/)  
+[210. Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)  
 ```c++
-typedef pair<int,int> pii;
-
+//DFS, recursion version
 class Solution{
 public:
-    int networkDelayTime(vector<vector<int>> & times, int n, int k)
-    {
-        vector<int> d(n+1, INT_MAX);
-        d[0]=0; // dummy node;
-        d[k]=0;
+    vector<int> findOrder(int numCourses, vector<vector<int>>& prerequisites) {
+        int N = numCourses;
+        vector<vector<int>> out_graph(N);
+        for(auto ele: prerequisites){
+            out_graph[ele[1]].push_back(ele[0]);
+        }
+        vector<int> rtn;
+        vector<bool> visited(N,false);
+        vector<bool> todo(N,false); // Important, this can help determine there is a cycle.
         
-        vector<vector<pii>> graph(n+1);
-        for(auto ele:times)
+        for(int i = 0;i<N;i++)
         {
-            int u=ele[0];
-            int v=ele[1];
-            int w=ele[2];
-            graph[u].push_back({v,w});
+            if(!visited[i] && !acyclic(out_graph, todo, visited, i, rtn)){
+                return vector<int>();
+            }            
         }
         
-        vector<bool> inQue(n+1, false);
-        queue<int> que;
+        reverse(rtn.begin(), rtn.end());
+        return rtn;        
+    }
+    
+    bool acyclic(vector<vector<int>>&out_graph, vector<bool>&todo, vector<bool>& visited, int node, vector<int>&rtn ){
+        if(todo[node]){ // found a cycle.
+            return false;
+        }
         
-        que.push(k);
-        inQue[k]=true;
-        while(!que.empty())
-        {
-            int u = que.front();
-            que.pop();
-            inQue[u]=false;
-            for(auto ele: graph[u])
-            {
-                int v = ele.first;
-                int w = ele.second;
-                if(d[v]>d[u]+w){
-                    d[v]=d[u]+w;
-                    if(!inQue[v]){
-                        que.push(v);
-                        inQue[v]=true;
-                    }
-                }
+        if(visited[node]){
+            return true;
+        }
+        todo[node]=true;
+        visited[node]=true;
+        for(int ele: out_graph[node]){
+            if(!acyclic(out_graph, todo , visited, ele, rtn)){
+                return false;
             }
         }
-        
-        int max_ele = 0;
-        for(auto ele: d)
-        {
-            max_ele=max(max_ele,ele);
-        }
-        return max_ele==INT_MAX? -1: max_ele;  
+        rtn.push_back(node);
+        todo[node]=false;        // Important, set back to false.
+        return true;
     }
 };
 ```
