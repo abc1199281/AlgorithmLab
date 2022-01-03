@@ -17,12 +17,20 @@ The layouts of forders basically follows the outline of [1]. Besides, the experi
 
 
 ### Middle
+
+#### Heap
+
+#### Dinamic Programming
+
+#### Greedy
+
 #### Graph
 - [Ch22.2 Elementary Graph Algo., BFS (22/01/01)](/Ch22_elementary_graph_algo/2_middle_breadth_first_search)  
 - [Ch22.3 Elementary Graph Algo., DFS (22/01/01)](/Ch22_elementary_graph_algo/3_middle_depth_first_search)  
 - [Ch22.4 Elementary Graph Algo., Topological Sort via DFS(22/01/01)](/Ch22_elementary_graph_algo/4_middle_topological_srot)  
+- [Ch22.* Elementary Graph Algo., Kahn's topological Sort (22/01/01)](/Ch22_elementary_graph_algo/4_middle_topological_srot)
 - [Ch23.2.1 Min. spanning tree, Kruskal (22/01/01)](/Ch23_min_spanning_tree/2_1_middle_Kruskal)  
-- [Ch23.2.1 Min. spanning tree, Prim (22/01/01)](/Ch23_min_spanning_tree/2_2_middle_Prim)  
+- [Ch23.2.2 Min. spanning tree, Prim (22/01/01)](/Ch23_min_spanning_tree/2_2_middle_Prim)  
 - [Ch24.1 Single source shortest path, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
 - [Ch24.2 Single source shortest path, Directed Acyclic graph (22/01/01)](/Ch24_single_source_shortest_paths/2_middle_DirectedAcyclicGraph)  
 - [Ch24.3 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/3_middle_Dijkstra)  
