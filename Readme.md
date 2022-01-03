@@ -21,7 +21,7 @@ The layouts of forders basically follows the outline of [1]. Besides, the experi
 #### Heap
 
 #### Dinamic Programming
-
+- [Ch15.3 Elementary of Dynamic Programming, SOP (22/01/03)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
 #### Greedy
 
 #### Graph
