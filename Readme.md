@@ -22,10 +22,12 @@ The layouts of forders basically follows the outline of [1]. Besides, the experi
 ### Sorting and Order Statistics
 
 ### Data Structure
+- [[TBD] Ch10 Elementary Data Structure (TBD)]
+- [[TBD] Ch11 Hash Tables (TBD)]
+- [[TBD] Ch12 Binary Search Trees (TBD)]
+- [[TBD] Ch13 Red Black Trees (TBD)]
 
 ### Advanced Design and Analysis Techniques
-
-### Advanced Data Structure
 - [[Middle] Ch15.3 Elementary of Dynamic Programming, SOP (22/01/03)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
 
 ##### Graph
@@ -39,7 +41,6 @@ The layouts of forders basically follows the outline of [1]. Besides, the experi
 - [[Middle] Ch24.2 Single source shortest path, Directed Acyclic graph (22/01/01)](/Ch24_single_source_shortest_paths/2_middle_DirectedAcyclicGraph)  
 - [[Middle] Ch24.3 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/3_middle_Dijkstra)  
 - [[Middle] Ch24.* Single source shortest path, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
-
 
 ### Hard  
 
