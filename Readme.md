@@ -12,22 +12,43 @@ To link the algorithm theorem and leet code problems, the note contains several 
 The layouts of forders basically follows the outline of [1]. Besides, the experiments which are not covered in the book are located in the folder **other** or the folder with similiar chapter, but labeled with star sign. The label of the difficulty basically follows the classification of leetcode [2].
 
 ## Outline  
+### Foundation
+- [[Easy] Ch1 the role of algorithm in computing (22/01/03)](/Ch1_the_role_of_algorithm)  
+- [[Easy] Ch3 Growth of functions (TBD)](/Ch1_the_role_of_algorithm)  
+- [[Middle] Ch4 Divide and Conquer, SOP (TBD)](/Ch1_the_role_of_algorithm)  
+- [[Middle] Ch4.5 Divide and Conquer, Master method (TBD)](/Ch1_the_role_of_algorithm)  
 
-### Easy
+### Sorting and Order Statistics
+- [[TBD] Ch6 Heap sort (TBD)]
+- [[TBD] Ch7 Quick sort (TBD)]
 
+### Data Structure
+- [[TBD] Ch10 Elementary Data Structure (TBD)]
+- [[TBD] Ch11 Hash Tables (TBD)]
+- [[TBD] Ch12 Binary Search Trees (TBD)]
+- [[Easy, just concept] Ch13 Red Black Trees (TBD)]
 
-### Middle
-#### Graph
-- [Ch22.2 Elementary Graph Algo., BFS (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch22.3 Elementary Graph Algo., DFS (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch22.3 Elementary Graph Algo., Topological Sort (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch23.2.1 Min. spanning tree, Kruskal (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch23.2.1 Min. spanning tree, Prim (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch24.1 Single source shortest path, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
-- [Ch24.2 Single source shortest path, Directed Acyclic graph (22/01/01)](/Ch24_single_source_shortest_paths/2_middle_DirectedAcyclicGraph)  
-- [Ch24.3 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/3_middle_Dijkstra)  
-- [Ch24.* Single source shortest path, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
+### Advanced Design and Analysis Techniques
+##### Dynamic Programming
+- [[Middle] Ch15.3 Elementary of Dynamic Programming, SOP (22/01/03)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
+##### Greedy Algorithms
+- [[Middle] Ch16.2 Elementary of Greedy Programming, SOP (TBD)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
+##### Amortized Analysis
+- [[Middle] Ch17.1 Aggregate analysis (TBD)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
+- [[Middle] Ch17.2 Accounting method (TBD)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
+- [[Middle] Ch17.3 Potential method (TBD)](/Ch15_dynamic_programming/3_element_of_dynamic_programming)  
 
+### Graph Algorithms
+- [[Middle] Ch22.2 Elementary Graph Algo., BFS (22/01/01)](/Ch22_elementary_graph_algo/2_middle_breadth_first_search)  
+- [[Middle] Ch22.3 Elementary Graph Algo., DFS (22/01/01)](/Ch22_elementary_graph_algo/3_middle_depth_first_search)  
+- [[Middle] Ch22.4 Elementary Graph Algo., Topological Sort via DFS(22/01/01)](/Ch22_elementary_graph_algo/4_middle_topological_srot)  
+- [[Middle] Ch22.* Elementary Graph Algo., Kahn's topological Sort (22/01/01)](/Ch22_elementary_graph_algo/4_middle_topological_srot)
+- [[Middle] Ch23.2.1 Min. spanning tree, Kruskal (TBD)](/Ch23_min_spanning_tree/2_1_middle_Kruskal)  
+- [[Middle] Ch23.2.2 Min. spanning tree, Prim (TBD)](/Ch23_min_spanning_tree/2_2_middle_Prim)  
+- [[Middle] Ch24.1 Single source shortest path, Bellman-Ford (22/01/01)](/Ch24_single_source_shortest_paths/1_middle_Bellman_Ford)  
+- [[Middle] Ch24.2 Single source shortest path, Directed Acyclic graph (22/01/01)](/Ch24_single_source_shortest_paths/2_middle_DirectedAcyclicGraph)  
+- [[Middle] Ch24.3 Single source shortest path, Dijkstra's algorithm (22/01/01)](/Ch24_single_source_shortest_paths/3_middle_Dijkstra)  
+- [[Middle] Ch24.* Single source shortest path, Shortest Path Faster Algorithm (22/01/01)](/Ch24_single_source_shortest_paths/other_middle_SPFA)  
 
 ### Hard  
 
